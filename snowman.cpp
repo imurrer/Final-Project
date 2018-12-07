@@ -2,6 +2,8 @@
 //Bella Murrer and Hannah Sarkey
 
 #include <iostream>
+#include <math.h>
+#include <cmath>
 #include "snowman.h"
 #include "gfx2.h"
 using namespace std;
@@ -19,7 +21,7 @@ Snowman::Snowman() {
 Snowman::~Snowman() 
 {}
 
-Snowman::display() {
+void Snowman::display() {
   gfx_color(255, 255, 255);
   gfx_fill_circle(xc1, yc1, r1);
   gfx_fill_circle(xc2, yc2, r2);
@@ -33,7 +35,24 @@ Snowman::display() {
   gfx_color(42, 43, 96);
   gfx_fill_rectangle(rhatx, rhaty, 24, 4);
   gfx_fill_rectangle(sqhatx, sqhaty, 14, 14);
+  
+  float length = 30;
+  float randx, randx, randa;
+  for (int i= 0; i <5; i++) {
+    randx = 10 + rand%690;
+    randy = 275 + rand%690;
+    randa = 30 + rand%90;
+    maketrees(randx, randy, length, randa);
+    i++
+  }
 }
+
+float Snowman::maketrees(float randx, float randy, float lenght, float randa) {
+  if (abs(length) < 1) return;
+  gfx_line(randx, randy, randx+cos(angle)*length, randy+(-1)*sin(angle)*length);
+  maketrees(randx+(length)*cos(randa), randy-(length)*sin(randa), length*0.65, angle+M_PI/6);
+  maketrees(randx+(length)*cos(randa), randy-(length)*sin(randa), length*0.65, angle-M_PI/6);
+}  
 
 
   
