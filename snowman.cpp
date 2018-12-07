@@ -14,7 +14,12 @@ Snowman::Snowman() {
   r1 =7, r2 = 8, r3 = 10;
   rhatx = 238, rhaty = 189;
   sqhatx = 243, sqhaty = 179; 
- 
+}
+
+Snowman::~Snowman() 
+{}
+
+Snowman::display() {
   gfx_color(255, 255, 255);
   gfx_fill_circle(xc1, yc1, r1);
   gfx_fill_circle(xc2, yc2, r2);
@@ -28,9 +33,6 @@ Snowman::Snowman() {
   gfx_color(42, 43, 96);
   gfx_fill_rectangle(rhatx, rhaty, 24, 4);
   gfx_fill_rectangle(sqhatx, sqhaty, 14, 14);
-}
-
-Snowman::~Snowman() {
 }
 
 
