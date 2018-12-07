@@ -1,1 +1,16 @@
-//snowman.h
+//snowman.h, Final Project
+// Bella Murrer and Hannah Sarkey
+
+class Snowman {
+  public:
+  // constructor and destructor
+  Snowman();
+  ~Snowman();
+  // utility methods
+  bool inbounds();
+  bool hitobject();
+  void getsnowflake();
+  private:
+  float cx1, cy1, cx2, cy2, cx3, cy3;
+  float sqhatx,sqhaty, rhatx, rhaty;
+};
