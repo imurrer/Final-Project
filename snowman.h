@@ -11,6 +11,6 @@ class Snowman {
   bool hitobject();
   void getsnowflake();
   private:
-  float cx1, cy1, cx2, cy2, cx3, cy3;
+  float cx1, cy1, cx2, cy2, cx3, cy3, r1, r2, r3;
   float sqhatx,sqhaty, rhatx, rhaty;
 };
