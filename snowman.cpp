@@ -12,6 +12,8 @@ Snowman::Snowman() {
   xc2 = 250, yc2 = 215;
   xc3 = 250, yc3 = 233;
   r1 =7, r2 = 8, r3 = 10;
+  rhatx = 238, rhaty = 189;
+  sqhatx = 243, sqhaty = 179; 
  
   gfx_color(255, 255, 255);
   gfx_fill_circle(xc1, yc1, r1);
@@ -22,6 +24,15 @@ Snowman::Snowman() {
   gfx_circle(xc1, yc1, r1);
   gfx_circle(xc2, yc2, r2);
   gfx_circle(xc3, yc3, r3);
-  
+  // make snowman hat
+  gfx_color(42, 43, 96);
+  gfx_fill_rectangle(rhatx, rhaty, 24, 4);
+  gfx_fill_rectangle(sqhatx, sqhaty, 14, 14);
+}
+
+Snowman::~Snowman() {
+}
+
+
   
   
